@@ -67,6 +67,10 @@ namespace CafeManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
+         if (txtLatte.Text != "0" || txtEspresso.Text != "0" || txtMocha.Text != "0" || txtValeCoffee.Text != "0" || txtCappu.Text != "0" || txtAfricanCoffee.Text != "0" ||
+             txtMilkTea.Text != "0" || txtChineseTea.Text != "0" || txtCoffeCake.Text != "0" || txtRedValvetCake.Text != "0" || txtBlackForestCake.Text != "0" || txtBostonCream.Text != "0" || txtLagosChoco.Text != "0" ||
+             txtKillburnChoco.Text != "0" || txtCheeseCake.Text != "0" || txtRainbowCake.Text != "0")
+            {
             string connection = "server=localhost;user id=root;password=;database=dbpesanan";
             string query = "INSERT INTO pesan1(Name, Latte,Espresso,Mocha,Vale,Cappucino,Cold,Milk,Chinese,Coffee,Valvet,Blackforest,Boston,Logos,Kilburn,Cheese,Rainbow)VALUES('"+ this.NamaAnda.Text + "','"+ this.txtLatte.Text + "','"+ this.txtEspresso.Text + "' , '"+ this.txtMocha.Text + "'," +
                 "'"+ this.txtValeCoffee.Text + "' , '"+ this.txtCappu.Text + "' , '"+ this.txtAfricanCoffee.Text + "' , '"+ this.txtMilkTea.Text + "' , '"+ this.txtChineseTea.Text + "', '"+ this.txtCoffeCake.Text + "', '"+ this.txtRedValvetCake.Text + "', '"+ this.txtBlackForestCake.Text + "', '"+ this.txtBostonCream.Text + "', '"+ this.txtLagosChoco.Text + "', '"+ this.txtKillburnChoco.Text + "', '"+ this.txtCheeseCake.Text + "', '"+ this.txtRainbowCake.Text + "')";
@@ -106,6 +110,7 @@ namespace CafeManagement
             rtfReceipt.AppendText("Total Cost \t\t\t" + lblTotal.Text + Environment.NewLine);
             rtfReceipt.AppendText("-------------------------------------------------------------" + Environment.NewLine);
             rtfReceipt.AppendText(lblTimer.Text + "\t" + lblDate.Text);
+            }
 
         }
 
